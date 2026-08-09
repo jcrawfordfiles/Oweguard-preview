@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OweGuard | Get Paid. Stay Protected.</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--navy:#061522;
+--navy2:#081b2a;
+--navy3:#0d2637;
+--green:#9BE52A;
+--green2:#B4F542;
+--white:#ffffff;
+--light:#f3f6f7;
+--text:#102230;
+--muted:#687984;
+--red:#ff6262;
+--orange:#f5b84b;
+--blue:#63b5eb;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+background:var(--navy);
+color:white;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button{
+font:inherit;
+cursor:pointer;
+}
+
+.container{
+width:min(1180px,90%);
+margin:auto;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+nav{
+height:76px;
+background:rgba(4,18,30,.97);
+border-bottom:1px solid rgba(255,255,255,.08);
+display:flex;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav-inner{
+width:min(1240px,92%);
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:27px;
+font-weight:950;
+letter-spacing:-1px;
+}
+
+.logo-mark{
+width:35px;
+height:40px;
+border:3px solid white;
+border-radius:11px 11px 18px 18px;
+display:grid;
+place-items:center;
+color:var(--green);
+font-size:20px;
+font-weight:950;
+}
+
+.logo span{
+color:var(--green);
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:23px;
+font-size:13px;
+font-weight:750;
+color:#d3dfe5;
+}
+
+.nav-links a:hover{
+color:var(--green);
+}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.login{
+font-size:13px;
+font-weight:800;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+border:none;
+border-radius:7px;
+padding:14px 19px;
+font-weight:950;
+font-size:12px;
+letter-spacing:.01em;
+transition:.2s ease;
+}
+
+.btn-green{
+background:var(--green);
+color:#061522;
+}
+
+.btn-green:hover{
+background:var(--green2);
+transform:translateY(-1px);
+}
+
+.btn-outline{
+background:rgba(6,21,34,.35);
+border:1px solid rgba(255,255,255,.45);
+color:white;
+}
+
+.btn-outline:hover{
+border-color:var(--green);
+color:var(--green);
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+min-height:650px;
+position:relative;
+display:flex;
+align-items:center;
+overflow:hidden;
+
+background:
+linear-gradient(
+90deg,
+rgba(3,15,25,.99) 0%,
+rgba(4,18,30,.96) 35%,
+rgba(4,18,30,.65) 62%,
+rgba(4,18,30,.30) 100%
+),
+url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1900&q=88");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+height:120px;
+background:linear-gradient(transparent,var(--navy));
+}
+
+.hero-grid{
+position:relative;
+z-index:3;
+width:min(1240px,90%);
+margin:auto;
+display:grid;
+grid-template-columns:1.05fr .95fr;
+align-items:center;
+gap:55px;
+padding:75px 0;
+}
+
+.eyebrow{
+color:var(--green);
+font-size:11px;
+font-weight:950;
+letter-spacing:1.5px;
+margin-bottom:16px;
+}
+
+.hero h1{
+font-size:clamp(50px,6vw,82px);
+line-height:.97;
+letter-spacing:-3.5px;
+font-weight:950;
+max-width:680px;
+margin-bottom:21px;
+}
+
+.hero h1 span{
+color:var(--green);
+}
+
+.hero-copy p{
+color:#d2dfe5;
+font-size:17px;
+line-height:1.65;
+max-width:600px;
+margin-bottom:27px;
+}
+
+.hero-buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:32px;
+}
+
+.hero-proof{
+display:flex;
+gap:24px;
+flex-wrap:wrap;
+font-size:12px;
+font-weight:800;
+color:#d4e0e5;
+}
+
+.proof-item{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.proof-icon{
+width:28px;
+height:28px;
+border-radius:50%;
+border:1px solid var(--green);
+color:var(--green);
+display:grid;
+place-items:center;
+font-size:12px;
+}
+
+/* =========================
+PAYMENT RADAR
+========================= */
+
+.radar-wrap{
+display:flex;
+justify-content:flex-end;
+}
+
+.radar{
+width:min(480px,100%);
+background:rgba(5,20,32,.97);
+border:1px solid rgba(255,255,255,.19);
+border-radius:17px;
+padding:24px;
+box-shadow:0 35px 90px rgba(0,0,0,.5);
+backdrop-filter:blur(5px);
+}
+
+.radar-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:23px;
+}
+
+.radar-title{
+font-size:14px;
+font-weight:950;
+letter-spacing:.04em;
+}
+
+.status-pill{
+font-size:9px;
+font-weight:950;
+color:var(--green);
+border:1px solid rgba(155,229,42,.35);
+background:rgba(155,229,42,.1);
+padding:7px 10px;
+border-radius:100px;
+}
+
+.small-label{
+color:#96aab4;
+font-size:9px;
+font-weight:900;
+}
+
+.total{
+font-size:44px;
+font-weight:950;
+margin:5px 0 21px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.stat{
+background:#0d2637;
+border:1px solid #294554;
+border-radius:10px;
+padding:15px;
+}
+
+.stat small{
+display:block;
+font-size:9px;
+font-weight:900;
+margin-bottom:7px;
+}
+
+.stat strong{
+font-size:21px;
+}
+
+.stat.green{
+border-color:#4a742a;
+}
+
+.stat.green small{
+color:var(--green);
+}
+
+.stat.orange{
+border-color:#725b2a;
+}
+
+.stat.orange small{
+color:var(--orange);
+}
+
+.stat.red{
+border-color:#71333c;
+}
+
+.stat.red small{
+color:#ff7477;
+}
+
+.stat.blue{
+border-color:#285879;
+}
+
+.stat.blue small{
+color:var(--blue);
+}
+
+.radar-bottom{
+display:flex;
+justify-content:space-between;
+gap:10px;
+margin-top:19px;
+font-size:11px;
+color:#a9bbc4;
+}
+
+/* =========================
+PRODUCT BAR
+========================= */
+
+.product-bar{
+background:#071927;
+border-top:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+}
+
+.product-mini{
+display:grid;
+grid-template-columns:46px 1fr;
+align-items:center;
+gap:13px;
+padding:25px 21px;
+border-right:1px solid rgba(255,255,255,.1);
+}
+
+.product-mini:last-child{
+border-right:0;
+}
+
+.mini-icon{
+width:43px;
+height:43px;
+border:2px solid var(--green);
+border-radius:50%;
+display:grid;
+place-items:center;
+color:var(--green);
+font-weight:950;
+font-size:18px;
+}
+
+.product-mini h3{
+font-size:13px;
+margin-bottom:4px;
+}
+
+.product-mini p{
+font-size:11px;
+line-height:1.4;
+color:#9db1bb;
+}
+
+/* =========================
+SECTIONS
+========================= */
+
+.section{
+padding:78px 0;
+}
+
+.light{
+background:var(--light);
+color:var(--text);
+}
+
+.white{
+background:white;
+color:var(--text);
+}
+
+.dark{
+background:var(--navy);
+}
+
+.section-head{
+max-width:780px;
+margin:0 auto 44px;
+text-align:center;
+}
+
+.section-kicker{
+font-size:10px;
+font-weight:950;
+letter-spacing:1.4px;
+color:#63b52a;
+margin-bottom:10px;
+}
+
+.section-head h2{
+font-size:clamp(34px,4vw,49px);
+line-height:1.07;
+letter-spacing:-1.5px;
+margin-bottom:13px;
+}
+
+.section-head p{
+font-size:15px;
+line-height:1.65;
+color:var(--muted);
+}
+
+/* =========================
+PRODUCT CARDS
+========================= */
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.feature-card{
+background:white;
+border:1px solid #dce5e9;
+border-radius:14px;
+padding:25px;
+box-shadow:0 8px 25px rgba(20,40,55,.05);
+}
+
+.feature-icon{
+width:49px;
+height:49px;
+border:2px solid #73c33b;
+border-radius:50%;
+background:#eff9df;
+color:#53a928;
+display:grid;
+place-items:center;
+font-size:20px;
+font-weight:950;
+margin-bottom:17px;
+}
+
+.feature-card h3{
+font-size:17px;
+margin-bottom:9px;
+}
+
+.feature-card p{
+font-size:13px;
+line-height:1.55;
+color:var(--muted);
+min-height:82px;
+}
+
+.learn{
+display:inline-block;
+margin-top:15px;
+font-size:12px;
+font-weight:900;
+color:#59a927;
+}
+
+/* =========================
+HOW IT WORKS
+========================= */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.step{
+text-align:center;
+padding:12px;
+}
+
+.step-num{
+width:54px;
+height:54px;
+margin:0 auto 15px;
+background:var(--green);
+color:#061522;
+border-radius:50%;
+display:grid;
+place-items:center;
+font-size:20px;
+font-weight:950;
+box-shadow:0 0 0 8px #eff9df;
+}
+
+.step h3{
+font-size:16px;
+margin-bottom:8px;
+}
+
+.step p{
+font-size:13px;
+line-height:1.55;
+color:var(--muted);
+}
+
+/* =========================
+RECOVERY
+========================= */
+
+.recovery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:center;
+}
+
+.red-kicker{
+color:#ff6868;
+font-size:11px;
+font-weight:950;
+letter-spacing:1.4px;
+margin-bottom:13px;
+}
+
+.recovery h2{
+font-size:clamp(40px,4.8vw,62px);
+line-height:1.02;
+letter-spacing:-2px;
+margin-bottom:18px;
+}
+
+.recovery h2 span{
+color:#ff6262;
+}
+
+.recovery-copy p{
+color:#c5d4db;
+line-height:1.65;
+font-size:15px;
+margin-bottom:20px;
+}
+
+.checks{
+display:grid;
+gap:11px;
+margin-bottom:25px;
+font-size:13px;
+color:#d7e3e8;
+}
+
+.checks span{
+color:var(--green);
+font-weight:950;
+margin-right:8px;
+}
+
+.recovery-card{
+background:#0c2333;
+border:1px solid #294554;
+border-radius:17px;
+padding:27px;
+box-shadow:0 25px 60px rgba(0,0,0,.28);
+}
+
+.recovery-amount{
+font-size:44px;
+font-weight:950;
+margin:10px 0 4px;
+}
+
+.overdue{
+font-size:12px;
+font-weight:900;
+color:#ff696d;
+margin-bottom:22px;
+}
+
+.score-head{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+margin-bottom:8px;
+}
+
+.score{
+height:9px;
+border-radius:100px;
+background:#173549;
+overflow:hidden;
+}
+
+.score div{
+height:100%;
+width:82%;
+background:var(--green);
+}
+
+.alert{
+margin-top:22px;
+border:1px solid rgba(255,98,98,.3);
+background:rgba(255,98,98,.08);
+padding:15px;
+border-radius:9px;
+color:#f4c4c4;
+font-size:12px;
+line-height:1.5;
+}
+
+/* =========================
+TRADES
+========================= */
+
+.trades{
+background:#081a28;
+}
+
+.trades .section-head h2{
+color:white;
+}
+
+.trades .section-head p{
+color:#b9cbd3;
+}
+
+.trade-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+}
+
+.trade{
+min-height:155px;
+position:relative;
+border-radius:13px;
+overflow:hidden;
+display:flex;
+align-items:flex-end;
+padding:16px;
+font-size:14px;
+font-weight:900;
+border:1px solid rgba(255,255,255,.12);
+
+background:
+linear-gradient(transparent,rgba(4,17,27,.95)),
+url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80");
+
+background-size:cover;
+background-position:center;
+}
+
+/* =========================
+PRICING
+========================= */
+
+.price-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:17px;
+}
+
+.price-card{
+position:relative;
+background:white;
+border:1px solid #dce5e9;
+border-radius:16px;
+padding:25px;
+}
+
+.price-card.popular{
+border:2px solid var(--green);
+transform:translateY(-5px);
+}
+
+.popular-tag{
+position:absolute;
+top:-13px;
+left:50%;
+transform:translateX(-50%);
+background:var(--green);
+color:#061522;
+border-radius:50px;
+padding:6px 11px;
+font-size:9px;
+font-weight:950;
+white-space:nowrap;
+}
+
+.price-card h3{
+font-size:19px;
+}
+
+.price{
+font-size:42px;
+font-weight:950;
+margin:12px 0 4px;
+}
+
+.price small{
+font-size:12px;
+font-weight:600;
+color:var(--muted);
+}
+
+.price-card p{
+font-size:13px;
+line-height:1.5;
+color:var(--muted);
+min-height:58px;
+}
+
+.price-card ul{
+list-style:none;
+margin:18px 0 23px;
+display:grid;
+gap:10px;
+font-size:12px;
+}
+
+.price-card li:before{
+content:"✓";
+color:#5db629;
+font-weight:950;
+margin-right:7px;
+}
+
+/* =========================
+MISSION
+========================= */
+
+.mission{
+background:
+linear-gradient(135deg,#0b2434,#061522);
+}
+
+.mission-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+}
+
+.mission h2{
+font-size:clamp(38px,4vw,53px);
+line-height:1.06;
+letter-spacing:-1.5px;
+margin-bottom:17px;
+}
+
+.mission h2 span{
+color:var(--green);
+}
+
+.mission p{
+font-size:15px;
+line-height:1.72;
+color:#c6d5dc;
+}
+
+.mission-card{
+background:#0c2333;
+border:1px solid #294554;
+border-radius:17px;
+padding:31px;
+}
+
+.mission-card h3{
+font-size:28px;
+line-height:1.1;
+margin-bottom:13px;
+}
+
+/* =========================
+FINAL CTA
+========================= */
+
+.final-cta{
+text-align:center;
+padding:78px 20px;
+background:#071927;
+}
+
+.final-cta h2{
+font-size:clamp(39px,5vw,58px);
+letter-spacing:-1.5px;
+margin-bottom:14px;
+}
+
+.final-cta h2 span{
+color:var(--green);
+}
+
+.final-cta p{
+color:#bfcfd6;
+margin-bottom:24px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:#03111c;
+padding:46px 0 25px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr repeat(3,1fr);
+gap:35px;
+margin-bottom:35px;
+}
+
+.footer-brand p{
+font-size:12px;
+line-height:1.6;
+color:#8fa5b0;
+max-width:330px;
+margin-top:12px;
+}
+
+.footer-col h4{
+font-size:11px;
+margin-bottom:13px;
+}
+
+.footer-col a{
+display:block;
+font-size:11px;
+color:#8fa5b0;
+margin-bottom:9px;
+}
+
+.footer-bottom{
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.08);
+font-size:10px;
+line-height:1.5;
+color:#758d99;
+display:flex;
+justify-content:space-between;
+gap:20px;
+}
+
+/* =========================
+MODAL
+========================= */
+
+.modal{
+position:fixed;
+inset:0;
+background:rgba(0,10,18,.9);
+z-index:3000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.modal.open{
+display:flex;
+}
+
+.modal-card{
+width:min(560px,100%);
+background:white;
+color:var(--text);
+border-radius:18px;
+padding:27px;
+box-shadow:0 35px 100px rgba(0,0,0,.6);
+}
+
+.modal-top{
+display:flex;
+justify-content:space-between;
+gap:15px;
+}
+
+.modal-card h2{
+font-size:30px;
+margin-bottom:8px;
+}
+
+.modal-card p{
+font-size:13px;
+line-height:1.55;
+color:var(--muted);
+margin-bottom:17px;
+}
+
+.close{
+border:0;
+background:#edf2f4;
+border-radius:50%;
+width:36px;
+height:36px;
+font-size:20px;
+}
+
+.field{
+margin-bottom:11px;
+}
+
+.field label{
+display:block;
+font-size:10px;
+font-weight:900;
+color:#667984;
+margin-bottom:6px;
+}
+
+.field input{
+width:100%;
+border:1px solid #d9e3e8;
+border-radius:8px;
+padding:12px;
+font:inherit;
+}
+
+.success{
+display:none;
+background:#eff9df;
+color:#43811f;
+padding:12px;
+border-radius:8px;
+font-size:12px;
+font-weight:800;
+margin-top:12px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1050px){
+
+.nav-links{
+display:none;
+}
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.radar-wrap{
+justify-content:flex-start;
+}
+
+.feature-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.trade-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.price-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:720px){
+
+nav{
+height:70px;
+}
+
+.logo{
+font-size:22px;
+}
+
+.login{
+display:none;
+}
+
+.nav-actions .btn{
+padding:11px 12px;
+font-size:10px;
+}
+
+.hero{
+min-height:auto;
+background-position:58% center;
+}
+
+.hero-grid{
+padding:55px 0 65px;
+gap:35px;
+}
+
+.hero h1{
+font-size:49px;
+letter-spacing:-2px;
+}
+
+.hero-copy p{
+font-size:15px;
+}
+
+.total{
+font-size:37px;
+}
+
+.product-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.product-mini{
+border-bottom:1px solid rgba(255,255,255,.09);
+}
+
+.feature-grid{
+grid-template-columns:1fr;
+}
+
+.steps{
+grid-template-columns:1fr 1fr;
+}
+
+.recovery{
+grid-template-columns:1fr;
+}
+
+.trade-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.price-grid{
+grid-template-columns:1fr;
+}
+
+.price-card.popular{
+transform:none;
+}
+
+.mission-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.footer-bottom{
+flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="nav-inner">
+
+<a href="#home" class="logo">
+<div class="logo-mark">✓</div>
+<div>Owe<span>Guard</span></div>
+</a>
+
+<div class="nav-links">
+<a href="#product">Product</a>
+<a href="#protection">Payment Protection</a>
+<a href="#how">How It Works</a>
+<a href="#recovery">Recovery</a>
+<a href="#trades">Who We Serve</a>
+<a href="#pricing">Pricing</a>
+<a href="#about">About</a>
+</div>
+
+<div class="nav-actions">
+<a href="#dashboard" class="login">Log In</a>
+<button class="btn btn-green" onclick="openRecovery()">
+I'M OWED MONEY
+</button>
+</div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-grid">
+
+<div class="hero-copy">
+
+<div class="eyebrow">
+AI-POWERED CONTRACTOR PAYMENT PROTECTION
+</div>
+
+<h1>
+You've Done<br>
+the Work.<br>
+<span>Now Get Paid.</span>
+</h1>
+
+<p>
+OweGuard helps contractors prevent payment problems,
+track what they're owed, automate professional follow-up,
+organize project proof and move unpaid invoices
+into a structured recovery workflow.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn btn-green" onclick="openRecovery()">
+I'M OWED MONEY →
+</button>
+
+<a href="#protection" class="btn btn-outline">
+PROTECT MY JOBS
+</a>
+
+</div>
+
+<div class="hero-proof">
+
+<div class="proof-item">
+<div class="proof-icon">✓</div>
+Built for Contractors
+</div>
+
+<div class="proof-item">
+<div class="proof-icon">◷</div>
+Save Time
+</div>
+
+<div class="proof-item">
+<div class="proof-icon">▣</div>
+Protect Your Money
+</div>
+
+</div>
+
+</div>
+
+<div class="radar-wrap">
+
+<div class="radar" id="dashboard">
+
+<div class="radar-top">
+<div class="radar-title">PAYMENT RADAR™</div>
+<div class="status-pill">● PROTECTION ACTIVE</div>
+</div>
+
+<div class="small-label">
+OUTSTANDING
+</div>
+
+<div class="total">
+$62,350
+</div>
+
+<div class="stats">
+
+<div class="stat green">
+<small>PROTECTED</small>
+<strong>$30,150</strong>
+</div>
+
+<div class="stat orange">
+<small>DUE SOON</small>
+<strong>$37,500</strong>
+</div>
+
+<div class="stat red">
+<small>ACTION REQUIRED</small>
+<strong>$24,850</strong>
+</div>
+
+<div class="stat blue">
+<small>ACTIVE PROJECTS</small>
+<strong>3</strong>
+</div>
+
+</div>
+
+<div class="radar-bottom">
+<span>Demo Payment Protection File</span>
+<span>View Projects →</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCT STRIP -->
+
+<section class="product-bar" id="product">
+
+<div class="container product-grid">
+
+<div class="product-mini">
+
+<div class="mini-icon">◎</div>
+
+<div>
+<h3>PAYMENT RADAR™</h3>
+<p>See every receivable at a glance.</p>
+</div>
+
+</div>
+
+<div class="product-mini">
+
+<div class="mini-icon">➤</div>
+
+<div>
+<h3>SMART CHASE™</h3>
+<p>Automated payment follow-up.</p>
+</div>
+
+</div>
+
+<div class="product-mini">
+
+<div class="mini-icon">◷</div>
+
+<div>
+<h3>GUARDCLOCK™</h3>
+<p>Organize important payment dates.</p>
+</div>
+
+</div>
+
+<div class="product-mini">
+
+<div class="mini-icon">▣</div>
+
+<div>
+<h3>PROOFVAULT™</h3>
+<p>Keep your project proof together.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PAYMENT PROTECTION -->
+
+<section class="section light" id="protection">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+THE OWEGUARD PLATFORM
+</div>
+
+<h2>
+One System. Every Dollar. Total Protection.
+</h2>
+
+<p>
+OweGuard gives contractors a single payment-protection
+workspace from project setup through recovery.
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<div class="feature-icon">◎</div>
+
+<h3>Payment Radar™</h3>
+
+<p>
+See which invoices are protected, approaching due dates,
+past due or requiring your attention.
+</p>
+
+<a href="#dashboard" class="learn">
+Explore Payment Radar →
+</a>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">➤</div>
+
+<h3>Smart Chase™</h3>
+
+<p>
+Keep payment conversations moving with professional,
+automated reminder workflows.
+</p>
+
+<a href="#how" class="learn">
+Explore Smart Chase →
+</a>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">◷</div>
+
+<h3>GuardClock™</h3>
+
+<p>
+Keep contractual dates and important project payment
+milestones organized and visible.
+</p>
+
+<a href="#how" class="learn">
+Explore GuardClock →
+</a>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">▣</div>
+
+<h3>ProofVault™</h3>
+
+<p>
+Keep contracts, invoices, photos, change orders
+and communications together.
+</p>
+
+<a href="#recovery" class="learn">
+Explore ProofVault →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section class="section white" id="how">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+HOW IT WORKS
+</div>
+
+<h2>
+Protection in 4 Simple Steps
+</h2>
+
+<p>
+From project setup through payment recovery,
+OweGuard keeps your receivables organized.
+</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="step-num">1</div>
+
+<h3>Add Your Project</h3>
+
+<p>
+Add your contract, invoice and key project information.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-num">2</div>
+
+<h3>OweGuard Monitors</h3>
+
+<p>
+Track payment status, documentation and important dates.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-num">3</div>
+
+<h3>Smart Chase Follows Up</h3>
+
+<p>
+Automated reminders help keep payment conversations moving.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-num">4</div>
+
+<h3>Get Paid</h3>
+
+<p>
+If payment stops, move the project into an organized recovery workflow.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RECOVERY -->
+
+<section class="section dark" id="recovery">
+
+<div class="container recovery">
+
+<div class="recovery-copy">
+
+<div class="red-kicker">
+RECOVERY CENTER
+</div>
+
+<h2>
+I'm Not Getting Paid.<br>
+<span>We Help You Get Paid.</span>
+</h2>
+
+<p>
+OweGuard turns unpaid invoices into structured recovery files
+with the documentation, dates and workflow contractors need
+to determine their next appropriate step.
+</p>
+
+<div class="checks">
+
+<div>
+<span>✓</span>
+Organize your project proof
+</div>
+
+<div>
+<span>✓</span>
+Automate payment follow-up
+</div>
+
+<div>
+<span>✓</span>
+Review important project dates
+</div>
+
+<div>
+<span>✓</span>
+Build a recovery-ready project file
+</div>
+
+</div>
+
+<button class="btn btn-green" onclick="openRecovery()">
+START RECOVERY →
+</button>
+
+</div>
+
+<div class="recovery-card">
+
+<div class="small-label">
+DEMO PROJECT
+</div>
+
+<h3 style="margin-top:7px;font-size:18px;">
+JOHNSON RESIDENCE
+</h3>
+
+<div class="recovery-amount">
+$24,850
+</div>
+
+<div class="overdue">
+17 DAYS OVERDUE
+</div>
+
+<div class="score-head">
+<span>Recovery Readiness Score™</span>
+<strong>82 / 100</strong>
+</div>
+
+<div class="score">
+<div></div>
+</div>
+
+<div class="alert">
+⚠ Demo information only. Payment and legal deadlines
+can vary by state, contract and project type.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHO WE SERVE -->
+
+<section class="section trades" id="trades">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+WHO WE SERVE
+</div>
+
+<h2>
+Built for the Trades That Build America
+</h2>
+
+<p>
+OweGuard is designed for contractors
+whose businesses depend on reliable project cash flow.
+</p>
+
+</div>
+
+<div class="trade-grid">
+
+<div class="trade">
+General Contractors
+</div>
+
+<div class="trade">
+Roofing Contractors
+</div>
+
+<div class="trade">
+Restoration Contractors
+</div>
+
+<div class="trade">
+HVAC Contractors
+</div>
+
+<div class="trade">
+Plumbing Contractors
+</div>
+
+<div class="trade">
+Electrical Contractors
+</div>
+
+<div class="trade">
+Remodeling Contractors
+</div>
+
+<div class="trade">
+Specialty Trades
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+
+<section class="section light" id="pricing">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+PRICING
+</div>
+
+<h2>
+Payment Protection That Grows With You
+</h2>
+
+<p>
+Simple plans for independent contractors,
+growing businesses and larger teams.
+</p>
+
+</div>
+
+<div class="price-grid">
+
+<div class="price-card">
+
+<h3>Starter</h3>
+
+<div class="price">
+$29
+<small>/month</small>
+</div>
+
+<p>
+For solo contractors getting their receivables organized.
+</p>
+
+<ul>
+<li>Project tracking</li>
+<li>Basic reminders</li>
+<li>ProofVault™</li>
+<li>Payment organization</li>
+</ul>
+
+<button class="btn btn-green">
+Choose Starter
+</button>
+
+</div>
+
+<div class="price-card popular">
+
+<div class="popular-tag">
+MOST POPULAR
+</div>
+
+<h3>Pro</h3>
+
+<div class="price">
+$79
+<small>/month</small>
+</div>
+
+<p>
+For contractors actively managing multiple receivables.
+</p>
+
+<ul>
+<li>Payment Radar™</li>
+<li>Smart Chase™</li>
+<li>GuardClock™</li>
+<li>Recovery Readiness Score™</li>
+<li>Advanced project files</li>
+</ul>
+
+<button class="btn btn-green">
+Choose Pro
+</button>
+
+</div>
+
+<div class="price-card">
+
+<h3>Business</h3>
+
+<div class="price">
+$199
+<small>/month</small>
+</div>
+
+<p>
+For established contractor teams and businesses.
+</p>
+
+<ul>
+<li>Multiple team members</li>
+<li>Advanced reporting</li>
+<li>Expanded project capacity</li>
+<li>Team controls</li>
+</ul>
+
+<button class="btn btn-green">
+Choose Business
+</button>
+
+</div>
+
+<div class="price-card">
+
+<h3>Enterprise</h3>
+
+<div class="price" style="font-size:32px;">
+Custom
+</div>
+
+<p>
+For larger companies, networks and strategic partners.
+</p>
+
+<ul>
+<li>Custom workflows</li>
+<li>Partner integrations</li>
+<li>Enterprise controls</li>
+<li>Custom onboarding</li>
+</ul>
+
+<button class="btn btn-green">
+Contact OweGuard
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MISSION -->
+
+<section class="section mission" id="about">
+
+<div class="container mission-grid">
+
+<div>
+
+<div class="eyebrow">
+OUR MISSION
+</div>
+
+<h2>
+Your Work Builds Everything.<br>
+<span>We Protect What You're Owed.</span>
+</h2>
+
+<p>
+OweGuard's mission is to make getting paid as reliable
+as doing the work by giving contractors intelligent tools
+to prevent payment problems, protect their payment rights
+and recover the money they've earned.
+</p>
+
+</div>
+
+<div class="mission-card">
+
+<div class="eyebrow">
+THE OWEGUARD VISION
+</div>
+
+<h3>
+A future where contractors never lose their businesses
+because someone failed to pay them.
+</h3>
+
+<p>
+OweGuard is building a new category:
+Contractor Payment Protection.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+<h2>
+You've Done the Work.
+<span>Now Get Paid.</span>
+</h2>
+
+<p>
+Start organizing your unpaid project with OweGuard.
+</p>
+
+<button class="btn btn-green" onclick="openRecovery()">
+I'M OWED MONEY →
+</button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<div class="logo">
+<div class="logo-mark">✓</div>
+<div>Owe<span>Guard</span></div>
+</div>
+
+<p>
+AI-powered contractor payment protection
+and recovery organization.
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h4>PRODUCT</h4>
+
+<a href="#product">Payment Radar™</a>
+<a href="#product">Smart Chase™</a>
+<a href="#product">GuardClock™</a>
+<a href="#product">ProofVault™</a>
+
+</div>
+
+<div class="footer-col">
+
+<h4>COMPANY</h4>
+
+<a href="#about">About</a>
+<a href="#trades">Who We Serve</a>
+<a href="#pricing">Pricing</a>
+<a href="#recovery">Recovery</a>
+
+</div>
+
+<div class="footer-col">
+
+<h4>RESOURCES</h4>
+
+<a href="#how">How It Works</a>
+<a href="#protection">Payment Protection</a>
+<a href="#recovery">Start Recovery</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div>
+© 2026 OweGuard Technologies.
+</div>
+
+<div>
+Launch preview • Demo financial figures shown for product demonstration.
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- RECOVERY MODAL -->
+
+<div class="modal" id="recoveryModal">
+
+<div class="modal-card">
+
+<div class="modal-top">
+
+<div>
+
+<div class="section-kicker">
+START A RECOVERY FILE
+</div>
+
+<h2>
+Tell OweGuard What You're Owed.
+</h2>
+
+</div>
+
+<button class="close" onclick="closeRecovery()">
+×
+</button>
+
+</div>
+
+<p>
+Start organizing an unpaid project.
+This preview does not transmit or permanently store your information.
+</p>
+
+<div class="field">
+
+<label>YOUR COMPANY</label>
+
+<input
+type="text"
+placeholder="ABC Roofing LLC"
+>
+
+</div>
+
+<div class="field">
+
+<label>CUSTOMER / GENERAL CONTRACTOR</label>
+
+<input
+type="text"
+placeholder="Customer or company name"
+>
+
+</div>
+
+<div class="field">
+
+<label>AMOUNT OWED</label>
+
+<input
+type="text"
+placeholder="$24,850"
+>
+
+</div>
+
+<div class="field">
+
+<label>PROJECT ADDRESS</label>
+
+<input
+type="text"
+placeholder="Project location"
+>
+
+</div>
+
+<button
+class="btn btn-green"
+style="width:100%"
+onclick="demoRecovery()"
+>
+CREATE MY RECOVERY FILE →
+</button>
+
+<div class="success" id="success">
+Demo recovery file created. No information was transmitted or stored.
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const recoveryModal =
+document.getElementById("recoveryModal");
+
+function openRecovery(){
+
+recoveryModal.classList.add("open");
+
+}
+
+function closeRecovery(){
+
+recoveryModal.classList.remove("open");
+
+}
+
+recoveryModal.addEventListener(
+"click",
+function(event){
+
+if(event.target === recoveryModal){
+
+closeRecovery();
+
+}
+
+}
+);
+
+function demoRecovery(){
+
+document
+.getElementById("success")
+.style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
